@@ -1,2 +1,4 @@
 在Java中一般线程的创建有两种方式
+继承Thread类，重写run方法
+实现Runnable接口，重写run方法
 
