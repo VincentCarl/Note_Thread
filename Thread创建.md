@@ -2,5 +2,6 @@
 
 
 继承Thread类，重写run方法
+
 实现Runnable接口，重写run方法
 
