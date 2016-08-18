@@ -24,6 +24,5 @@
 如果所有的工作都在UI线程，做一些比较耗时的工作比如访问网络或者数据库查询，都会阻塞UI线程，导致事件停止分发（包括绘制事件）。对于用户说，应用看起来像是卡住了，更坏的情况是，如果UI线程blocked的时间太长（大约超过5秒），用户就会看到ANR（application not responding）的对话框。
 
 Andoid UI toolkit并不是线程安全的，所以你不能从非UI线程来操纵UI组件。你必须把所有的UI操作放在UI线程里，所以Android的单线程模型有两条原则：
-
 1. 不要阻塞UI线程。
 2. 不要在UI线程之外访问Android UI toolkit（主要是这两个包中的组件：android.widget and android.view）。
