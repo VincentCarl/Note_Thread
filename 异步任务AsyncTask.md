@@ -1,11 +1,13 @@
 ##AsyncTask
 ---
 **官方文档：**  
-public abstract class AsyncTask 
+```Java
+public abstract class AsyncTask    
 extends Object 
 
-java.lang.Object  
-       ↳	android.os.AsyncTask<Params, Progress, Result>
+java.lang.Object   
+android.os.AsyncTask<Params, Progress, Result>
+```
 ---
 AsyncTask enables proper and easy use of the UI thread. This class allows to perform background operations and publish results on the UI thread without having to manipulate threads and/or handlers.
 
