@@ -1,5 +1,7 @@
 ##Android消息机制  
 ----
+###不妨先瞅瞅这篇文章---[ 浅析Android中的消息机制](http://blog.csdn.net/liuhe688/article/details/6407225/ "CSDN")
+
 Android中活动为UI主线程，不能执行耗时超出5秒的任务，并且所有View和ViewGroup都只能在UI主线程中运行。如果View或者ViewGroup在次线程中运行，将会抛出【Only the original thread that created a view hierarchy can touch its views】，那么android中会**通过消息机制来解决线程和线程之间的通信问题。**  
 
 ##线程与线程之间的通信--Android消息机制  
