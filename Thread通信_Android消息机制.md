@@ -1,5 +1,7 @@
 ##Android消息机制  
 ----
+###不妨先瞅瞅这篇文章---[ 浅析Android中的消息机制](http://blog.csdn.net/liuhe688/article/details/6407225/ "CSDN")
+
 Android中活动为UI主线程，不能执行耗时超出5秒的任务，并且所有View和ViewGroup都只能在UI主线程中运行。如果View或者ViewGroup在次线程中运行，将会抛出【Only the original thread that created a view hierarchy can touch its views】，那么android中会**通过消息机制来解决线程和线程之间的通信问题。**  
 
 ##线程与线程之间的通信--Android消息机制  
@@ -9,7 +11,7 @@ Android中活动为UI主线程，不能执行耗时超出5秒的任务，并且�
 * Message  
 * MessageQueue  
 * Looper
-![](file:///C:/Users/旭军/Desktop/android消息机制.png)  
+![](/pic/android消息机制.png)  
 
 ##Handler  
 ---  
@@ -19,9 +21,9 @@ Android中活动为UI主线程，不能执行耗时超出5秒的任务，并且�
 
 
 *  handler可以在任意线程发送消息，这些消息会被添加到关联的MQ上。  
-![](file:///C:/Users/旭军/Desktop/handlerSend.png)
+![](/pic/handlerSend.png)
 *  handler是在它关联的looper线程中处理消息的。  
-![](file:///C:/Users/旭军/Desktop/handlerLoop.png)
+![](/pic/handlerLoop.png)
 
 ####handler发送消息  
 ---
@@ -312,7 +314,7 @@ public class LooperThread extends Thread {
 * loop();调用loop方法后，Looper线程就开始真正工作了，它不断从自己的MQ中取出队头的消息(也叫任务)执行。
 
 
-![](file:///C:/Users/旭军/Desktop/looper.png)  
+![](/pic/looper.png)  
 
 ----
 ####关于Looper总结几点：
